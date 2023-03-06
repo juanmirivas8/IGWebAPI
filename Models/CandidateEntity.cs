@@ -1,0 +1,19 @@
+using IGWebAPI.Models.enums;
+
+namespace IGWebAPI.Models;
+
+public class CandidateEntity
+{
+    public int ID { get; set; }
+    public string Name { get; set; }
+    public char Surname { get; set; }
+    public string Description { get; set; }
+    public string RejectionReason { get; set; }
+    public CandidateStatusEnum Status { get; set; }
+    public ContactMethodEnum ContactMethod { get; set; }
+    public DateOnly CvDate { get; set; }
+    public DateOnly InterviewDate { get; set; }
+    public DateOnly TechnicalTestDate { get; set; }
+    public DateOnly FirstContactDate { get; set; }
+    public RolEntity Rol { get; set; }
+}
