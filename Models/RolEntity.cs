@@ -1,9 +1,14 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using IGWebAPI.Models.enums;
 
 namespace IGWebAPI.Models;
 
+[Table("Roles")]
 public class RolEntity
 {
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
     public string Project{get; set;} = string.Empty;
     public string Area { get; set; } = string.Empty;
@@ -12,8 +17,9 @@ public class RolEntity
     public string Description { get; set; } = string.Empty;
     public RolStatusEnum Status { get; set; }
     public int Vacancies { get; set; } = 1;
-    public DateOnly CreationDate { get; set; }
-    public DateOnly ClosingDate { get; set; }
-    public DateOnly LastUpdate { get; set; }
-    public List<CandidateEntity> Candidates { get; set; } = new();
+    [DataType(DataType.Date)]
+    public DateTime CreationDate { get; set; }
+    public DateTime ClosingDate { get; set; }
+    public DateTime LastUpdate { get; set; }
+    //public List<CandidateEntity> Candidates { get; set; } = new();
 }

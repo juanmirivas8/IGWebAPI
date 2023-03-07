@@ -11,9 +11,9 @@ public class CandidateEntity
     public string RejectionReason { get; set; }
     public CandidateStatusEnum Status { get; set; }
     public ContactMethodEnum ContactMethod { get; set; }
-    public DateOnly CvDate { get; set; }
-    public DateOnly InterviewDate { get; set; }
-    public DateOnly TechnicalTestDate { get; set; }
-    public DateOnly FirstContactDate { get; set; }
+    public DateTime CvDate { get; set; }
+    public DateTime InterviewDate { get; set; }
+    public DateTime TechnicalTestDate { get; set; }
+    public DateTime FirstContactDate { get; set; }
     public RolEntity Rol { get; set; }
 }

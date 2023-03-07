@@ -13,8 +13,8 @@ public class RolFullGetResponseDto
     public string Description { get; set; } = string.Empty;
     public RolStatusEnum Status { get; set; }
     public int Vacancies { get; set; } = 1;
-    public DateOnly CreationDate { get; set; }
-    public DateOnly ClosingDate { get; set; }
-    public DateOnly LastUpdate { get; set; }
+    public DateTime CreationDate { get; set; }
+    public DateTime ClosingDate { get; set; }
+    public DateTime LastUpdate { get; set; }
     public List<CandidateEntity> Candidates { get; set; } = new();
 }
